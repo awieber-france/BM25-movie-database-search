@@ -37,9 +37,10 @@ b = normalization constant (between 0 and 1)<br>
     - **curl -LsSf https://astral.sh/uv/0.9.11/install.sh | sh**
 - Perform a git pull of the project
 - Navigate to the local git project folder in a terminal
-- **curl -LsSf https://astral.sh/uv/0.9.11/install.sh | sh**
-- **source $HOME/.local/bin/env**
-- Call **uv build**
+- Add uv to the path:
+    - **source $HOME/.local/bin/env**
+- Build the environment:
+    - **uv build**
 
 ### Movie data:
 Movie data must be downloaded separately and placed in the /data repository of the project. It can be downloaded at the following link:<br>
