@@ -43,6 +43,8 @@ b = normalization constant (between 0 and 1)<br>
 ### Installation
 - Perform a git pull of the project
 - Navigate to the local git project folder in a terminal
+- **curl -LsSf https://astral.sh/uv/0.9.11/install.sh | sh**
+- **source $HOME/.local/bin/env**
 - Call **uv build**
 
 ### Movie data:
@@ -60,8 +62,10 @@ This project should operate on any system capable of using the above uv and pyth
 
 ## 3) Using the files
 - Navigate to the local git project folder in a terminal
-- Type the commands directly into the terminal, for example:
-    - run cli/keyword_search_cli.py bm25search "space adventure"
+- Build the cached database files:
+    - **uv run cli/keyword_search_cli.py build**
+- Type a command, for example:
+    - **uv run cli/keyword_search_cli.py bm25search "space adventure"**
 - Go to cli/lib/search_utils.py to adjust the default search limit, k1 and b values.
 - Call help function to get details of possible commands:
     - **uv run ./cli/keyword_search_cli.py --help**

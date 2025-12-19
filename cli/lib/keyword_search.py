@@ -61,10 +61,6 @@ def build_command() -> None:
     idx = InvertedIndex()
     idx.build()
     idx.save()
-    # Test code
-    id_test = idx.get_documents('merida')
-    if len(id_test) > 0:
-        print(f"First document for token 'merida' = {id_test[0]}")
 
 def tf_command(doc_id: int, term: str) -> None:
     idx = InvertedIndex()
