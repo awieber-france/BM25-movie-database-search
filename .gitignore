@@ -1,0 +1,18 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Other files
+.DS_Store
+cache/
+
+# Virtual environments
+.venv
+~.zshrc
+
+# Large data files to ignore
+/data/movies.json
