@@ -13,20 +13,12 @@ Top 5 matches are supplied by default.
 
 The BM25 search algorithm, when coupled with text preprocessing, allows for effective retrieval of relevant items. As applied to the movie database, it searches both the title and the description of the movie. Using BM25, the advantage of a longer description (more occurrences of key words) is less beneficial. BM25 also gives more weight to words that occur less frequently in the database.
 
-The following equations are used in the implementation of the BM25 search algorithm.
+The following equations are used in the implementation of the BM25 search algorithm:<br>
+<p align="center"><img src="./images/Lnorm.svg"></p>
+<p align="center"><img src="./images/bm25_tf.svg"></p>
+<p align="center"><img src="./images/bm25_idf.svg"></p>
+<p align="center"><img src="./images/bm25_score.svg"></p>
 
-$$
-{L_{\text{norm}}} \;=\; 1 - b + b \cdot \frac{\text{doc\_length}}{\text{avg\_doc\_length}}
-$$
-$$
-\text{BM25\_TF}(t,D) \;=\; \frac{ TF \cdot (k_1 + 1) }{ TF + k_1 \cdot {L_{\text{norm}}}}
-$$
-$$
-\text{BM25\_IDF}(t) \;=\; \log\!\left( \frac{N - DF + 0.5}{DF + 0.5} + 1 \right)
-$$
-$$
-\text{BM25\_SCORE} \;=\; \sum_{t \in q} \text{BM25\_TF}(t,D)\cdot\text{BM25\_IDF}(t)
-$$
 **Where:**<br>
 N = total number of movies<br>
 DF = document frequency (nb of documents containing the term)<br>
@@ -41,6 +33,8 @@ b = normalization constant (between 0 and 1)<br>
 - Python version: ≥3.13
 
 ### Installation
+- Install uv (if necessary):
+    - **curl -LsSf https://astral.sh/uv/0.9.11/install.sh | sh**
 - Perform a git pull of the project
 - Navigate to the local git project folder in a terminal
 - **curl -LsSf https://astral.sh/uv/0.9.11/install.sh | sh**

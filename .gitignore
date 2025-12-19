@@ -9,6 +9,7 @@ wheels/
 # Other files
 .DS_Store
 cache/
+images/equations_latex.txt
 
 # Virtual environments
 .venv
