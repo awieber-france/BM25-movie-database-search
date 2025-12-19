@@ -27,6 +27,8 @@ L<sub>norm</sub> = normalized document length<br>
 k<sub>1</sub> = saturation constant<br>
 b = normalization constant (between 0 and 1)<br>
 
+Text preprocessing is applied to both the query and the combined title-description text. The preprocessing consists of transformation to lower case, punctuation removal, stemming, and tokenization.
+
 ## 2) Requirements
 ### Virtual environment
 - Python package manager: uv 0.9.11
